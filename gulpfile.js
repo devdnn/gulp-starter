@@ -71,6 +71,7 @@ gulp.task('styles', function () {
  * Watcher per auto build al change dei file .js o .css nella cartella dev
  */
 gulp.task('default', ['images', 'scripts', 'styles'], function () {
+    gulp.watch('dev/img/**/*', ['images']);
     gulp.watch('dev/js/**/*.js', ['scripts']);
     gulp.watch('dev/css/**/*.css', ['styles']);
 });
